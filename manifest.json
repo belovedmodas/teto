@@ -1,0 +1,11 @@
+{
+  "name": "Teto de tecido",
+  "short_name": "Teto de tecido",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#cc9c9a",
+  "icons": [
+    { "src": "https://belovedmodas.github.io/teto/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://belovedmodas.github.io/teto/icone-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Teto de tecido</title>
+  <!-- Porta de entrada do Teto de tecido (bem-me-quer): só existe para o celular guardar o
+       ícone e o nome certos no atalho da tela de início. O app de verdade roda no Google,
+       dentro do quadro abaixo. Mesma receita do app splitLKS. -->
+  <link rel="apple-touch-icon" href="https://belovedmodas.github.io/teto/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://belovedmodas.github.io/teto/icone-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://belovedmodas.github.io/teto/icone-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://belovedmodas.github.io/teto/icone-512.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Teto de tecido">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#cc9c9a">
+  <style>
+    html, body { margin: 0; height: 100%; background: #fbf6f5; }
+    iframe { border: 0; width: 100%; height: 100%; display: block; }
+    /* No iPhone o Google mostra dentro do quadro um aviso de 85px no alto
+       ("Este aplicativo foi criado por um usuário..."). Medido no app splitLKS em telas de
+       320 a 480px de largura. Empurra o quadro para cima para escondê-lo. */
+    body.iphone iframe { margin-top: -85px; height: calc(100% + 85px); }
+  </style>
+</head>
+<body>
+  <script>
+    // O manifesto só entra fora do iPhone: no iOS ele fazia o atalho vir com uma letra
+    // em vez do ícone; lá vale só a tag apple-touch-icon acima.
+    var iphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (iphone) document.body.className = 'iphone';
+    if (!iphone) {
+      var m = document.createElement('link');
+      m.rel = 'manifest';
+      m.href = 'https://belovedmodas.github.io/teto/manifest.json';
+      document.head.appendChild(m);
+    }
+    var APP = 'https://script.google.com/macros/s/AKfycbzxvcJgJAHMUKK5iaI6qMg9JHMQVblnWtmftBFntva143mi0WAiNU-WNpqwOe8eRjKR/exec';
+    var f = document.createElement('iframe');
+    f.src = APP;
+    f.title = 'Teto de tecido';
+    document.body.appendChild(f);
+  </script>
+</body>
+</html>
